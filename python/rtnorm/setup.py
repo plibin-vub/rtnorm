@@ -4,8 +4,6 @@ Created on Oct 24, 2015
 @author: jonaswallin
 '''
 
-USE_OPENMP = True
-
 import numpy as np
 import os
 from Cython.Distutils import build_ext
@@ -38,10 +36,6 @@ class CleanCommand(Command):
 
 extra_compile_args=["-std=c++11","-O3"]
 extra_link_args=["-std=c++11"]
-if USE_OPENMP:
-	extra_compile_args.append("-fopenmp")
-	extra_link_args.append( "-fopenmp")
-
 
 
 

@@ -15,11 +15,12 @@ For python the requirements are:
 * scipy (will be removed)
 * NumPy
 * Cython
-* openmp (option can be turned off in setupy.py)
+* openmp (optional, can be turned on by using a CFLAG)
 
+		pip -e 'git+https://git@github.com/JonasWallin/rtnorm.git#egg=rtnorm&subdirectory=python/rtnorm'
 
-
-		pip -e 'git+https://git@github.com/JonasWallin/rtnorm.git#egg=rtnorm&subdirectory=python/rtnorm' 
+With OpenMP support:
+        'CFLAGS="-fopenmp" pip -e 'git+https://git@github.com/JonasWallin/rtnorm.git#egg=rtnorm&subdirectory=python/rtnorm' 
 
 To use the sampler:
 
